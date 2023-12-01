@@ -1,5 +1,6 @@
 (ns aoc-2023-clojure.core
-  (:require [clojure.string :as str]))
+  (:require [aoc_2023_clojure.day-01 :refer :all]
+            [clojure.string :as str]))
 
 (defn read-input
   "Returns a collection of input lines from the puzzle input."

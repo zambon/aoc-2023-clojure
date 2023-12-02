@@ -36,7 +36,7 @@
                                        "pqr3stu8vwx"
                                        "a1b2c3d4e5f"
                                        "treb7uchet"]] 142
-                                     [(read-input 1)] 55834}))
+                                     [(read-lines 1)] 55834}))
 
 (def pattern "one|two|three|four|five|six|seven|eight|nine|\\d")
 
@@ -58,4 +58,4 @@
                                        "4nineeightseven2"
                                        "zoneight234"
                                        "7pqrstsixteen"]] 281
-                                     [(read-input 1)]    53221}))
+                                     [(read-lines 1)]    53221}))

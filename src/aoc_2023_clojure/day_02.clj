@@ -61,8 +61,8 @@
                (nth rounds (inc index) nil))))))
 
 (defn sum-results
-  "docstring"
-  [games result-summing-fn]
+  "Applies fn to each game and returns the sum of the results."
+  [games fn]
   (let [game-matcher (get-game-matcher games)]
     (loop [game (re-find game-matcher)
            result 0]
@@ -72,7 +72,7 @@
               rounds (get-game-rounds (nth game 2))]
           (recur (re-find game-matcher)
                  (+ result
-                    (result-summing-fn id rounds))))))))
+                    (fn id rounds))))))))
 
 (defn solve-p02p1
   "Solves puzzle 2 part 1. https://adventofcode.com/2023/day/2"
@@ -116,5 +116,5 @@
   "Solves puzzle 2 part 2. https://adventofcode.com/2023/day/2#part2"
   [games]
   (sum-results games
-               (fn [id rounds]
+               (fn [_ rounds]
                  (get-game-power rounds))))

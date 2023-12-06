@@ -1,6 +1,7 @@
 (ns aoc-2023-clojure.core
   (:require [aoc_2023_clojure.day-01 :refer :all]
             [aoc_2023_clojure.day-02 :refer :all]
+            [aoc_2023_clojure.day-03 :refer :all]
             [clojure.string :as str]))
 
 (defn read-input
